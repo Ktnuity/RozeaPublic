@@ -4,7 +4,7 @@ set -e
 
 if [ -f "Rozea.zip" ]; then
     echo "Need to backup Rozea.zip first"
-    exit 1
+    mv Rozea.zip "Rozea_backup_$(date +%Y%m%d_%H%M%S).zip"
 fi
 
 zip -r Rozea.zip assets pack.mcmeta
