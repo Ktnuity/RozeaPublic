@@ -7,7 +7,7 @@ if [ -f "Rozea.zip" ]; then
     mv Rozea.zip "Rozea_backup_$(date +%Y%m%d_%H%M%S).zip"
 fi
 
-zip -r Rozea.zip assets pack.mcmeta
+zip -r Rozea.zip assets pack.mcmeta -x *.aseprite
 
 echo "Generating SHA-1 checksum..."
 sha1sum Rozea.zip | awk '{print $1}' > checksum.txt
